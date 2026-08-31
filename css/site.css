@@ -1,33 +1,38 @@
 @charset "UTF-8";
 
-/*configuração geral do corpo da página*/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 
 header {
-    height: 170px;
-    background-color: #000000b2;
+    height: 120px;  
+    background-color: #000000;
+}
+
+html, body {
+    margin: 0;
+    min-height: 100%;
 }
 
 body {
-
-    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: "Century Gothic", "sans-serif";
-    background-color: #3a3b3b;
+    background-color: #ffffff;
+}
+
+main {
+    flex: 1;
 }
 
 /*Configuraçãoes do cabeçalho*/
 
-
-
-header img {
-    float: left;
-    height: 150px;
-    width: 150px;
-    margin: 10px;
-}
-
 header h1 {
     float: left;
-    margin: 50px 0 0 30px;
+    margin: 30px 0 0 30px;
     font-size: 50px;
     color: #ffffff;
 }
@@ -36,7 +41,7 @@ header h1 {
 
 nav {
     clear: both;
-    width: 85%;
+    width: 90%;
     margin: 10px auto;
     height: 80px;
 }
@@ -54,128 +59,62 @@ nav .opcao {
     width: 20%;
     background-color: #000000;
     padding: 10px 0;
-    margin: 0 1%;
+    margin: 0 2%;
     font-size: 26px;
     border-radius: 20px;
 }
 
-nav .opcao:hover {
-    background-color: #83afd3;
+section nav {
+    display: flex;
+    flex-direction: column;
+    width: 200px; /* largura da barra lateral */
+    padding: 15px;
+    border-radius: 5px;
 }
 
-section {
-    clear: both;
-    min-height: 360px;
-    width: 100%;
-    margin-top: 0px;
-    background-color: #302f2f;
-}
+section nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+} 
 
 footer {
-    background-color: #797878;
+    background-color: #000000b2;
     color: #fff;
     text-align: center;
     padding: 10px;
+    margin-top: auto;
 }
 
-section #topo {
-    width: 900px;
-    margin: 0px auto;
-    height: 250px;
+p {
+    text-indent: 30px;
+    width: 70%;
 }
 
-section #titulos {
-    float: left;
-    height: 250px;
-    width: 1000px;
-    margin: 0px;
+.conteudo-condicional {
+    display: flex;
+    gap: 20px;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-size: 50px;
+.conteudo-condicional nav {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
 }
 
-h2 {
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-size: 35px;
+.painel-lateral {
+    flex: 1;
 }
 
-h3 {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 20px;
+.conteudo-item {
+    display: none; /* escondido por padrão */
+    animation: fadeIn 0.3s ease-in-out;
 }
 
-section p {
-    clear: both;
-    text-align: center;
-    margin: 10px 80px;
+.conteudo-item.ativo {
+    display: block;
 }
 
-/*Configuração da página produtos*/
-.filmes {
-    margin: 10px auto;
-    text-align: center;
-}
-
-.filme {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff;
-    padding: 50px;
-    border: transparent;
-}
-
-tr,
-td,
-th {
-    border: 1px solid #3e4147;
-    padding: 5px;
-}
-
-tr,
-td {
-    font-size: 14px;
-}
-
-tr:nth-child(even) {
-    background-color: #f7b83d;
-}
-
-tr:nth-child(odd) {
-    background-color: #7d2513;
-}
-
-.inscricao {
-    width: 300px;
-    margin: 0px auto;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.inscricao input,
-.inscricao textarea,
-.inscricao select {
-    margin: 5px auto;
-    width: 100%;
-    padding: 5px 0;
-}
-
-.faleconosco textarea {
-    height: 100px;
-    resize: none;
-}
-
-.inscricao button {
-    width: 30%;
-    margin: 0 10%;
-    background-color: #b1ccf5;
-    font-weight: bold;
-    font-size: 16px;
-}

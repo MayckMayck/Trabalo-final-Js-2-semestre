@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html leng="pt-br">
+<html lang="pt-br">
 
 <head>
     <meta chaset="UTF-8">
     <meta name="viewport" content="width=device-width, instal-scale=1.0">
-
     <title>Estruturas Condicionais</title>
     <link rel="stylesheet" type="text/css" href="css/site.css">
 
@@ -18,38 +17,197 @@
 
     </header>
 
+    <div class="continerMenu">
+        <nav>
+            <!-- A tag nav cria uma área para navegação como menus e outros -->
+
+            <a href="paginaInicial.html">
+                <div class="opcao">Página Inicial</div>
+            </a>
+            <a href="estruraCondicional.html">
+                <div class="opcao">Estrutura Condicionais</div>
+            </a>
+            <a href="estruturaRepeticao.html">
+                <div class="opcao">Estrutura de Repetição</div>
+            </a>
+            <a href="estruturaVetrores.html">
+                <div class="opcao">Estrutura de <br>Vetrores</div>
+            </a>
+
+        </nav>
+    </div>
+    
+    <!-- a tag section define uma seção dos conteúdos de uma página. -->
+
+   <section class="conteudo-condicional">
     <nav>
-        <!-- A tag nav cria uma área para navegação como menus e outros -->
-        <a href="pagPrincipal.html">
-            <div class="opcao">Pagina Inicial</div>
-        </a>
-
-        <a href="estruraCondicional.html">
-            <div class="opcao">Estrutura Condicionais</div>
-        </a>
-
-        <a href="estruturaRepeticao.html">
-            <div class="opcao">Estrutura de Repetição</div>
-        </a>
-
-        <a href="estruturaVetrores.html">
-            <div class="opcao">Estrutura de Vetrores</div>
-        </a>
+        <a href="#" class="opcao-lateral" onclick="mostrarConteudo('se')">Estrutura Se</a>
+        <a href="#" class="opcao-lateral" onclick="mostrarConteudo('caso')">Estrutura Caso</a>
     </nav>
 
-    <section>
-        <nav>
-            <a href="estruturaSe.html">Estrutura Se</a>
-            <a href="estruturaCaso.html">Estrutura Caso</a>
-        </nav>
-    </section>
+    <div class="painel-lateral">
 
-    <!-- a tag section define uma seção dos conteúdos de uma página. -->
+        <!-- Conteúdo: Estrutura Se -->
+        <div id="conteudo-se" class="conteudo-item" data-tipo="se">
+
+           <h3>Estrutura Se</h3>
+
+            <p>Estrutura Condicional Se (if)
+
+                A estrutura condicional Se, representada em JavaScript pelo comando if, 
+                é utilizada quando o programa precisa tomar uma decisão com base em uma condição.
+                O programa verifica se uma determinada expressão é verdadeira ou falsa e,
+                dependendo do resultado, executa uma ação.  
+                Por exemplo, podemos verificar se uma pessoa possui 18 anos ou mais.
+                Caso essa condição seja verdadeira, o programa pode informar que a pessoa é maior de idade.
+                Também podemos utilizar o comando else, que significa senão,
+                para definir o que acontecerá caso a condição seja falsa.
+                Outro exemplo seria verificar a nota de um aluno. Se a nota for maior ou igual a 7, 
+                o programa pode informar que o aluno está aprovado. Caso contrário, 
+                pode informar que ele não atingiu a nota necessária.
+                Dessa forma, a estrutura Se permite que o programa tome decisões
+                diferentes de acordo com as informações recebidas.
+            </p>
+                  
+
+            <div class="botoes-acao">
+                <button onclick="irPara(this, 'exemplo')">Exemplo</button>
+                <button onclick="irPara(this, 'atividade')">Atividade</button>
+            </div>
+
+            <div class="subsecao" data-secao="exemplo">
+
+                <h4>Exemplo 01</h4>
+
+                <p>Estrutura condicional – Maior de idade
+                    Nesse exemplo, utilizamos a estrutura condicional "if/else" para verificar a idade de uma pessoa.
+                    <br><br>1. Primeiro, o usuário informa sua idade por meio do campo de entrada do HTML.
+                    <br>2. O JavaScript recebe esse valor e verifica a condição.
+                    <br>3. Com o "if", verificamos se a idade é maior ou igual a 18 anos.
+                    <br>4. Se a condição for verdadeira, o programa mostra uma mensagem 
+                    informando que a pessoa é maior de idade.
+                    <br>5. Caso a condição seja falsa, o "else" é executado e o programa 
+                    informa que a pessoa é menor de idade.
+                    <br><br>Dessa forma, a estrutura "if/else" permite que o programa tome
+                     uma decisão de acordo com o valor informado pelo usuário.
+                </p>
+
+                <img src="imgs/imgExemploMiorIdade.png" alt="imagem de exemplo que mostra a estrutura SE..SENAO">
+
+                <h4>Exemplo 02</h4>
+
+                <p>Estrutura condicional – Aprovação ou reprovação
+                    Nesse exemplo, utilizamos a estrutura condicional "if/else" para verificar a nota de um aluno.
+                    <br><br>1. Primeiro, o aluno informa sua nota no campo de entrada do HTML.
+                    <br>2. O JavaScript recebe a nota informada.
+                    <br>3. O "if" verifica se a nota é maior ou igual a 7.
+                    <br>4. Se a condição for verdadeira, o programa mostra a mensagem “Aprovado”.
+                    <br>5. Se a condição for falsa, o "else" é executado e o programa mostra a mensagem “Reprovado”.
+                    <br><br>Assim, o programa utiliza uma condição para analisar a nota e determinar automaticamente 
+                    o resultado do aluno.
+                </p>
+
+                <img src="imgs/imgExploNota.png" alt="imagem de exemplo que mostra a estrutura SE...SENAO">
+
+            </div>
+
+            <div class="subsecao" data-secao="atividade">
+                <h4>Atividade</h4>
+                <p>Aqui vai a atividade prática da estrutura "se"...</p>
+            </div>
+        </div>
+
+        <!-- Conteúdo: Estrutura Caso -->
+        <div id="conteudo-caso" class="conteudo-item" data-tipo="caso">
+            <h3>Estrutura Caso</h3>
+            <p>Estrutura Condicional Caso(switch)
+                A estrutura condicional Caso, representada em JavaScript pelo comando switch, 
+                é utilizada quando precisamos trabalhar com várias opções diferentes. 
+                Ela verifica o valor de uma variável e executa uma ação específica para cada possibilidade encontrada.
+                Por exemplo, imagine um sistema que possui um menu de opções:
+                <br><br>1 — Estruturas Condicionais
+                <br>2 — Estruturas de Repetição
+                <br>3 — Vetores
+                <br><br>Ao escolher uma das opções, o programa verifica qual número foi informado e executa o conteúdo correspondente. Para cada possibilidade utilizamos o case, que representa cada caso ou opção.
+                Também podemos utilizar o default, que será executado caso nenhuma das opções informadas seja encontrada.
+                A estrutura Caso é muito útil para criar menus, sistemas com opções, escolha de dias da semana, meses ou diferentes alternativas. Ela ajuda a organizar o código quando existem várias possibilidades específicas.</p>
+
+            <div class="botoes-acao">
+                <button onclick="irPara(this, 'exemplo')">Exemplo</button>
+                <button onclick="irPara(this, 'atividade')">Atividade</button>
+            </div>
+
+            <div class="subsecao" data-secao="exemplo">
+                <h4>Exemplo 01</h4>
+                <p>O que está acontecendo no programa?
+                    Neste programa, a variável dia é criada sem possuir um valor inicial. 
+                    Em seguida, o comando prompt() solicita que o usuário digite um número
+                    correspondente a um dia da semana.
+                    <br>Depois que o usuário informa o número, a estrutura switch verifica qual foi a opção
+                    digitada e compara esse valor com os diferentes case disponíveis.
+                    <br><br>Caso o usuário digite 1, será exibido Domingo;<br> se digitar 2, 
+                    será exibido Segunda-feira;<br> e se digitar 3, será exibido Terça-feira.
+                    <br></br>Após encontrar a opção correta, o comando break encerra a execução da estrutura switch,
+                    impedindo que os outros casos sejam executados. Caso o usuário digite um número 
+                    diferente das opções disponíveis, o default será executado e mostrará a mensagem "Dia inválido".
+                    Dessa forma, o programa utiliza a estrutura condicional Caso (switch) para tomar
+                    uma decisão de acordo com a opção escolhida pelo usuário.
+                </p>
+                <img src="imgs/imgExemploCasoDia.png" alt="">
+
+                <h4>Exemplo 02</h4>
+                <p>Neste programa, a variável opcao é criada inicialmente sem receber um valor. Em seguida,
+                    o comando prompt() solicita que o usuário digite uma opção entre 1, 2 ou 3.
+                    Depois que o usuário informa sua escolha, a estrutura switch verifica o valor digitado
+                    e compara com cada uma das opções disponíveis.
+                    <br><br>Se o usuário digitar 1, o programa informa 
+                    "Estruturas Condicionais". 
+                    <br>Se digitar 2, será exibida a mensagem "Estruturas de Repetição".
+                    <br>Caso digite 3, o programa mostrará "Vetores".
+                    <br><br>aaaaaaaaaaaaaaaaaaaaaaaaaaaaApós executar a opção correspondente, o comando break encerra aquele caso,
+                    evitando que os próximos casos sejam executados. Caso o usuário digite um valor diferente
+                    de 1, 2 ou 3, o default será executado e mostrará a mensagem "Opção inválida".
+                    Dessa forma, o programa utiliza a estrutura condicional Caso (switch) para identificar
+                    a opção escolhida pelo usuário e executar uma ação diferente para cada escolha.
+                </p>
+                <img src="imgs/imgExxemploCaoOpcao.png" alt="">
+
+            </div>
+
+            <div class="subsecao" data-secao="atividade">
+                <h4>Atividade</h4>
+                <p>Aqui vai a atividade prática da estrutura "caso"...</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <script>
+        function mostrarConteudo(tipo) {
+            document.querySelectorAll('.conteudo-item').forEach(function (item) {item.classList.remove('ativo');});
+            document.getElementById('conteudo-' + tipo).classList.add('ativo');
+        }
+
+        function irPara(botao, secao) {
+            // Encontra o container "pai" (conteudo-item) mais próximo do botão clicado
+            const container = botao.closest('.conteudo-item');
+
+            // Dentro desse container, busca a subseção pelo data-secao
+            const destino = container.querySelector('[data-secao="' + secao + '"]');
+
+            if (destino) {
+                destino.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+}  
+    </script>
+
+     <main></main>
      
-         <h2>h2</h2>
+        
        
     <!-- A tag footer define a criação de um rodapé. -->
-  
+   
   <footer>Copyright &copy; GR SADP 2026/1 </footer>
 
 </body>
@@ -57,112 +215,3 @@
 </html>
 
 
-
-
-<!-- <table class="filmes">
-    <thead>
-        <tr>
-            <th colspan="5" class="filme">.</th>
-        </tr>
-        <th>Filme</th>
-        <th>Lançamento</th>
-        <th>hosras</th>
-        <th>Oscar</th>
-        <th>IMDB</th>
-    </thead>
-    <tbody>
-        <td>Harry Potter e a Pedra Filosofal</td>
-        <td>2001</td>
-        <td>2h 32m</td>
-        <td>3 indicaçoes</td>
-        <td>&#9733 7.7 </td>
-        <tr>
-            <td>Harry Potter e a Câmara Secreta</td>
-            <td>2002</td>
-            <td>2h 41m</td>
-            <td>0 indicação</td>
-            <td>&#9733 7.5</td>
-        </tr>
-        <tr>
-            <td>Harry Potter e o Prisioneiro de azkaban</td>
-            <td>2004</td>
-            <td>2h 22m</td>
-            <td>2 indicaçoes</td>
-            <td>&#9733 7.9</td>
-        </tr>
-        <tr>
-            <td>Harry Potter e o Cálice de Fogo</td>
-            <td>2005</td>
-            <td>2h 37m</td>
-            <td>1 indicação</td>
-            <td>&#9733 7.7</td>
-        </tr>
-        <tr>
-            <td>Harry Potter e a Ordem da Fênix</td>
-            <td>2007</td>
-            <td>2h 18m</td>
-            <td>0 indicação</td>
-            <td>&#9733 7.5</td>
-        </tr>
-        <tr>
-            <td>Harry potter e o Enigma do Príncipe</td>
-            <td>2009</td>
-            <td>2h 33m</td>
-            <td>1 indicação</td>
-            <td>&#9733 7.6</td>
-        </tr>
-        <tr>
-            <td>Harry Potter e as Relíquias da Morte: Parte 1</td>
-            <td>2010</td>
-            <td>2h 26m</td>
-            <td>1 indicação</td>
-            <td>&#9733 7.7</td>
-        </tr>
-        <tr>
-            <td>Harry Potter e as Relíquias da Morte: Parte 2</td>
-            <td>2011</td>
-            <td>2h 10m</td>
-            <td>3 indicaçoes</td>
-            <td>&#9733 8.1</td>
-        </tr>
-    </tbody>
-    <table class="filmes">
-        <thead>
-            <tr>
-                <th colspan="5">Escola de Magia e Bruxaria de Hogwarts</th>
-            </tr>
-            <tr>
-                <th>Casas</th>
-                <th>Fundadores</th>
-                <th>Professor Responsavel</th>
-                <th>Taça de Quadribol</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Sonserina</td>
-                <td>Salazar Slytherin</td>
-                <td>Severus Snape</td>
-                <td>0+</td>
-            </tr>
-            <tr>
-                <td>Corvinal</td>
-                <td>Rowena Ravenclaw</td>
-                <td>Filius Flitwick</td>
-                <td>0+</td>
-            </tr>
-            <tr>
-                <td>Lufa-Lufa</td>
-                <td>Helga Hufflepuff</td>
-                <td>Pomona Sprout</td>
-                <td>1+</td>
-            </tr>
-            <tr>
-                <td>Grifinória</td>
-                <td>Godric Gryffindor</td>
-                <td>Minerva McGonagall</td>
-                <td>5+</td>
-            </tr>
-        </tbody>
-    </table>
-</table> -->
