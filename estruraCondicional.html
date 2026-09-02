@@ -20,7 +20,6 @@
     <div class="continerMenu">
         <nav>
             <!-- A tag nav cria uma área para navegação como menus e outros -->
-
             <a href="paginaInicial.html">
                 <div class="opcao">Página Inicial</div>
             </a>
@@ -31,18 +30,17 @@
                 <div class="opcao">Estrutura de Repetição</div>
             </a>
             <a href="estruturaVetrores.html">
-                <div class="opcao">Estrutura de <br>Vetrores</div>
+                <div class="opcao">Estrutura de Vetror</div>
             </a>
 
         </nav>
     </div>
-    
-    <!-- a tag section define uma seção dos conteúdos de uma página. -->
 
+    <!-- a tag section define uma seção dos conteúdos de uma página. -->
    <section class="conteudo-condicional">
     <nav>
         <a href="#" class="opcao-lateral" onclick="mostrarConteudo('se')">Estrutura Se</a>
-        <a href="#" class="opcao-lateral" onclick="mostrarConteudo('caso')">Estrutura Caso</a>
+        <br><a href="#" class="opcao-lateral" onclick="mostrarConteudo('caso')">Estrutura Caso</a>
     </nav>
 
     <div class="painel-lateral">
@@ -92,8 +90,18 @@
                      uma decisão de acordo com o valor informado pelo usuário.
                 </p>
 
-                <img src="imgs/imgExemploMiorIdade.png" alt="imagem de exemplo que mostra a estrutura SE..SENAO">
+                <img src="imgs/imgExemploSeMaiorIdade.png" alt="imagem de exemplo que mostra a estrutura SE..SENAO">
 
+                <br><button onclick="alternarCodigo(this)">Ver código</button>
+
+                <pre class="bloco-codigo" style="display: none;"><code>let nota; 
+                    idade = parseInt(idade);
+                    if (idade >= 18) {
+                        alert("Você é maior de idade.");
+                    } else {
+                        alert("Você é menor de idade.");
+                    }</code></pre>
+        
                 <h4>Exemplo 02</h4>
 
                 <p>Estrutura condicional – Aprovação ou reprovação
@@ -107,19 +115,47 @@
                     o resultado do aluno.
                 </p>
 
-                <img src="imgs/imgExploNota.png" alt="imagem de exemplo que mostra a estrutura SE...SENAO">
+                <img src="imgs/imgExemploSeNota.png" alt="imagem de exemplo que mostra a estrutura SE...SENAO">
 
+                <br><button onclick="alternarCodigo(this)">Ver código</button>
+                <pre class="bloco-codigo" style="display: none;"><code>let nota = prompt("Digite a nota do aluno (de 0 a 10): ");
+                    nota = parseFloat(nota);
+
+                    if (nota >= 7.0) {
+                        alert("Aluno aprovado! Paraben.");
+                    } else {
+                        alert("Aluno em recuperação. Precia etudar mai. ");
+                    }</code></pre>
             </div>
+
+            <h4>Atividade 01 — Maior de idade</h4>
+            <p>Digite uma idade e clique em "Verificar" para saber se a pessoa é maior ou menor de idade.</p>
 
             <div class="subsecao" data-secao="atividade">
-                <h4>Atividade</h4>
-                <p>Aqui vai a atividade prática da estrutura "se"...</p>
+                <div class="atividade-caixa">
+                    <label for="inputIdade">Idade: </label>
+                    <input type="number" id="inputIdade" placeholder="Digite a idade">
+                    <button onclick="verificarIdade()">Verificar</button>
+                    <p id="resultadoIdade" class="resultado"></p>
+                </div>
+
+                    <h4>Atividade 02 — Aprovação do aluno</h4>
+                    <p>Digite a nota do aluno e clique em "Verificar" para saber se ele foi aprovado ou reprovado.</p>
+
+            <div class="atividade-caixa">
+                <label for="inputNota">Nota: </label>
+                <input type="number" id="inputNota" step="0.1" placeholder="Digite a nota (0 a 10)">
+                <button onclick="verificarNota()">Verificar</button>
+                <p id="resultadoNota" class="resultado"></p>
             </div>
         </div>
+    </div>    
 
         <!-- Conteúdo: Estrutura Caso -->
         <div id="conteudo-caso" class="conteudo-item" data-tipo="caso">
+
             <h3>Estrutura Caso</h3>
+            
             <p>Estrutura Condicional Caso(switch)
                 A estrutura condicional Caso, representada em JavaScript pelo comando switch, 
                 é utilizada quando precisamos trabalhar com várias opções diferentes. 
@@ -138,6 +174,7 @@
             </div>
 
             <div class="subsecao" data-secao="exemplo">
+
                 <h4>Exemplo 01</h4>
                 <p>O que está acontecendo no programa?
                     Neste programa, a variável dia é criada sem possuir um valor inicial. 
@@ -153,7 +190,29 @@
                     Dessa forma, o programa utiliza a estrutura condicional Caso (switch) para tomar
                     uma decisão de acordo com a opção escolhida pelo usuário.
                 </p>
+
                 <img src="imgs/imgExemploCasoDia.png" alt="">
+
+                <br><button onclick="alternarCodigo(this)">Ver código</button>
+                <pre class="bloco-codigo" style="display: none;"><code>let dia;
+
+                    dia = prompt("Digite um número de 1 a 3:");
+                    switch (dia) {
+                        case "1":
+                            alert("Domingo");
+                            break;
+
+                        case "2":
+                            alert("Segunda-feira");
+                            break;
+
+                        case "3":
+                            alert("Terça-feira");
+                            break;
+
+                        default:
+                            alert("Dia inválido");}</code></pre>
+            </div>
 
                 <h4>Exemplo 02</h4>
                 <p>Neste programa, a variável opcao é criada inicialmente sem receber um valor. Em seguida,
@@ -170,48 +229,125 @@
                     Dessa forma, o programa utiliza a estrutura condicional Caso (switch) para identificar
                     a opção escolhida pelo usuário e executar uma ação diferente para cada escolha.
                 </p>
+
                 <img src="imgs/imgExxemploCaoOpcao.png" alt="">
 
-            </div>
+                <br><button onclick="alternarCodigo(this)">Ver código</button>
+                <pre class="bloco-codigo" style="display: none;"><code>let opcao;
+                    opcao = prompt("Digite uma opção: 1, 2 ou 3");
+                    switch (opcao) {
+                        case "1":
+                            alert("Estruturas Condicionais");
+                            break;
 
-            <div class="subsecao" data-secao="atividade">
-                <h4>Atividade</h4>
-                <p>Aqui vai a atividade prática da estrutura "caso"...</p>
-            </div>
-        </div>
+                        case "2":
+                            alert("Estruturas de Repetição");
+                            break;
 
+                        case "3":
+                            alert("Vetores");
+                               break;
+
+                        default:
+                            alert("Opção inválida")};</code></pre>
+
+                <div class="subsecao" data-secao="atividade">
+
+                    <h4>atividade 01</h4>
+                    <p> atividade</p>
+
+                    <h4>atividade 02</h4>
+                    <p>atividade</p>
+                </div> 
+            </div>
     </div>
 </section>
+<!-- botao que volta ao topo da poagina -->
+<button id="btnTopo" onclick="voltarAoTopo()" title="Voltar ao topo">↑</button>
 
-    <script>
-        function mostrarConteudo(tipo) {
-            document.querySelectorAll('.conteudo-item').forEach(function (item) {item.classList.remove('ativo');});
-            document.getElementById('conteudo-' + tipo).classList.add('ativo');
+<script>
+    function mostrarConteudo(tipo) {
+        document.querySelectorAll('.conteudo-item').forEach(function (item) {item.classList.remove('ativo');});
+        document.getElementById('conteudo-' + tipo).classList.add('ativo');
+    }
+
+    function irPara(botao, secao) {
+        const container = botao.closest('.conteudo-item');
+        const destino = container.querySelector('[data-secao="' + secao + '"]');
+
+        if (destino) {
+            destino.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    function alternarCodigo(botao) {
+        const codigo = botao.nextElementSibling;
+        if (codigo.style.display === 'none') {
+            codigo.style.display = 'block';
+            botao.textContent = 'Esconder código';
+        } else {
+            codigo.style.display = 'none';
+            botao.textContent = 'Ver código';
+        }
+    }
+        // atividade verifica idade
+    function verificarIdade() {
+        let idade = document.getElementById('inputIdade').value;
+        idade = parseInt(idade);
+
+        const resultado = document.getElementById('resultadoIdade');
+
+        if (isNaN(idade)) {
+            resultado.textContent = 'Por favor, digite uma idade válida.';
+            return;
         }
 
-        function irPara(botao, secao) {
-            // Encontra o container "pai" (conteudo-item) mais próximo do botão clicado
-            const container = botao.closest('.conteudo-item');
+        if (idade >= 18) {
+            resultado.textContent = 'Você é maior de idade.';
+        } else {
+            resultado.textContent = 'Você é menor de idade.';
+        }
+    }
 
-            // Dentro desse container, busca a subseção pelo data-secao
-            const destino = container.querySelector('[data-secao="' + secao + '"]');
+        // atividade valida nota
+    function verificarNota() {
+        let nota = document.getElementById('inputNota').value;
+        nota = parseFloat(nota);
 
-            if (destino) {
-                destino.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-}  
+        const resultado = document.getElementById('resultadoNota');
+
+        if (isNaN(nota)) {
+            resultado.textContent = 'Por favor, digite uma nota válida.';
+            return;
+        }
+
+        if (nota >= 7.0) {
+            resultado.textContent = 'Aluno aprovado! Parabéns.';
+        } else {
+            resultado.textContent = 'Aluno em recuperação. Precisa estudar mais.';
+        }
+    }
+
+    function voltarAoTopo() {
+         window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+            // Mostra o botão só depois de rolar um pouco a página
+            window.onscroll = function () {
+                const btn = document.getElementById('btnTopo');
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    btn.style.display = 'block';
+                } else {
+                    btn.style.display = 'none';
+                }
+            };
+        
+
     </script>
 
-     <main></main>
-     
-        
-       
     <!-- A tag footer define a criação de um rodapé. -->
-   
   <footer>Copyright &copy; GR SADP 2026/1 </footer>
 
 </body>
-<script></script>
 </html>
 
 
