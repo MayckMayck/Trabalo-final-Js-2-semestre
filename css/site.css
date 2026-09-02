@@ -47,6 +47,7 @@ p{
 nav {
     clear: both;
     width: 90%;
+    width: 90%;
     margin: 10px auto;
     height: 80px;
 }
@@ -64,6 +65,7 @@ nav .opcao{
     width: 20%;
     background-color: #000000;
     padding: 10px 0;
+    margin: 0 2%;
     margin: 0 2%;
     font-size: 26px;
     border-radius: 20px;
@@ -104,6 +106,7 @@ section nav a {
 } 
 
 footer {
+    background-color: #000000b2;
     background-color: #000000b2;
     color: #fff;
     text-align: center;
