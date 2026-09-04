@@ -12,9 +12,7 @@
 <body>
 
     <header>
-
         <h1>Estruturas Condicionais</h1>
-
     </header>
 
     <div class="continerMenu">
@@ -29,7 +27,7 @@
             <a href="estruturaRepeticao.html">
                 <div class="opcao">Estrutura de Repetição</div>
             </a>
-            <a href="estruturaVetrores.html">
+            <a href="estruturaVetores.html">
                 <div class="opcao">Estrutura de Vetror</div>
             </a>
 
@@ -155,138 +153,138 @@
                     <p id="resultadoNota" class="resultado"></p>
                 </div>
             </div>
-        </div>    
+        </div>
+            <!-- Conteúdo: Estrutura Caso -->
+            <div id="conteudo-caso" class="conteudo-item" data-tipo="caso">
 
-        <!-- Conteúdo: Estrutura Caso -->
-        <div id="conteudo-caso" class="conteudo-item" data-tipo="caso">
+                <h3>Estrutura Caso</h3>
+                
+                <p>Estrutura Condicional Caso(switch)
+                    A estrutura condicional Caso, representada em JavaScript pelo comando switch, 
+                    é utilizada quando precisamos trabalhar com várias opções diferentes. 
+                    Ela verifica o valor de uma variável e executa uma ação específica para cada possibilidade encontrada.
+                    Por exemplo, imagine um sistema que possui um menu de opções:
+                    <br><br>1 — Estruturas Condicionais
+                    <br>2 — Estruturas de Repetição
+                    <br>3 — Vetores
+                    <br><br>Ao escolher uma das opções, o programa verifica qual número foi informado e executa o conteúdo correspondente. Para cada possibilidade utilizamos o case, que representa cada caso ou opção.
+                    Também podemos utilizar o default, que será executado caso nenhuma das opções informadas seja encontrada.
+                    A estrutura Caso é muito útil para criar menus, sistemas com opções, escolha de dias da semana, meses ou diferentes alternativas. Ela ajuda a organizar o código quando existem várias possibilidades específicas.</p>
 
-            <h3>Estrutura Caso</h3>
-            
-            <p>Estrutura Condicional Caso(switch)
-                A estrutura condicional Caso, representada em JavaScript pelo comando switch, 
-                é utilizada quando precisamos trabalhar com várias opções diferentes. 
-                Ela verifica o valor de uma variável e executa uma ação específica para cada possibilidade encontrada.
-                Por exemplo, imagine um sistema que possui um menu de opções:
-                <br><br>1 — Estruturas Condicionais
-                <br>2 — Estruturas de Repetição
-                <br>3 — Vetores
-                <br><br>Ao escolher uma das opções, o programa verifica qual número foi informado e executa o conteúdo correspondente. Para cada possibilidade utilizamos o case, que representa cada caso ou opção.
-                Também podemos utilizar o default, que será executado caso nenhuma das opções informadas seja encontrada.
-                A estrutura Caso é muito útil para criar menus, sistemas com opções, escolha de dias da semana, meses ou diferentes alternativas. Ela ajuda a organizar o código quando existem várias possibilidades específicas.</p>
+                <div class="botoes-acao">
+                    <button onclick="irPara(this, 'exemplo')">Exemplo</button>
+                    <button onclick="irPara(this, 'atividade')">Atividade</button>
+                </div>
 
-            <div class="botoes-acao">
-                <button onclick="irPara(this, 'exemplo')">Exemplo</button>
-                <button onclick="irPara(this, 'atividade')">Atividade</button>
-            </div>
+                <div class="subsecao" data-secao="exemplo">
 
-            <div class="subsecao" data-secao="exemplo">
+                    <h4>Exemplo 01</h4>
+                    <p>O que está acontecendo no programa?
+                        Neste programa, a variável dia é criada sem possuir um valor inicial. 
+                        Em seguida, o comando prompt() solicita que o usuário digite um número
+                        correspondente a um dia da semana.
+                        <br>Depois que o usuário informa o número, a estrutura switch verifica qual foi a opção
+                        digitada e compara esse valor com os diferentes case disponíveis.
+                        <br><br>Caso o usuário digite 1, será exibido Domingo;<br> se digitar 2, 
+                        será exibido Segunda-feira;<br> e se digitar 3, será exibido Terça-feira.
+                        <br></br>Após encontrar a opção correta, o comando break encerra a execução da estrutura switch,
+                        impedindo que os outros casos sejam executados. Caso o usuário digite um número 
+                        diferente das opções disponíveis, o default será executado e mostrará a mensagem "Dia inválido".
+                        Dessa forma, o programa utiliza a estrutura condicional Caso (switch) para tomar
+                        uma decisão de acordo com a opção escolhida pelo usuário.
+                    </p>
 
-                <h4>Exemplo 01</h4>
-                <p>O que está acontecendo no programa?
-                    Neste programa, a variável dia é criada sem possuir um valor inicial. 
-                    Em seguida, o comando prompt() solicita que o usuário digite um número
-                    correspondente a um dia da semana.
-                    <br>Depois que o usuário informa o número, a estrutura switch verifica qual foi a opção
-                    digitada e compara esse valor com os diferentes case disponíveis.
-                    <br><br>Caso o usuário digite 1, será exibido Domingo;<br> se digitar 2, 
-                    será exibido Segunda-feira;<br> e se digitar 3, será exibido Terça-feira.
-                    <br></br>Após encontrar a opção correta, o comando break encerra a execução da estrutura switch,
-                    impedindo que os outros casos sejam executados. Caso o usuário digite um número 
-                    diferente das opções disponíveis, o default será executado e mostrará a mensagem "Dia inválido".
-                    Dessa forma, o programa utiliza a estrutura condicional Caso (switch) para tomar
-                    uma decisão de acordo com a opção escolhida pelo usuário.
+                    <img src="imgs/imgExemploCasoDia.png" alt="">
+
+                    <br><button onclick="alternarCodigo(this)">Ver código</button>
+                    <pre class="bloco-codigo" style="display: none;">
+                        <code>
+                            let numero;
+
+                            dia = prompt("Digite um número de 1 a 3:");
+
+                            switch (dia) {
+                            case "1":
+                                alert("Domingo");
+                                break;
+
+                            case "2":
+                                alert("Segunda-feira");
+                                break;
+
+                            case "3":
+                                alert("Terça-feira");
+                                break;
+
+                            default:
+                                alert("Dia inválido");}
+                        </code>
+                    </pre>
+                </div>
+
+                <h4>Exemplo 02</h4>
+                <p>Neste programa, a variável opcao é criada inicialmente sem receber um valor. Em seguida,
+                    o comando prompt() solicita que o usuário digite uma opção entre 1, 2 ou 3.
+                    Depois que o usuário informa sua escolha, a estrutura switch verifica o valor digitado
+                    e compara com cada uma das opções disponíveis.
+                    <br><br>Se o usuário digitar 1, o programa informa 
+                    "Estruturas Condicionais". 
+                    <br>Se digitar 2, será exibida a mensagem "Estruturas de Repetição".
+                    <br>Caso digite 3, o programa mostrará "Vetores".
+                    <br><br>aaaaaaaaaaaaaaaaaaaaaaaaaaaaApós executar a opção correspondente, o comando break encerra aquele caso,
+                    evitando que os próximos casos sejam executados. Caso o usuário digite um valor diferente
+                    de 1, 2 ou 3, o default será executado e mostrará a mensagem "Opção inválida".
+                    Dessa forma, o programa utiliza a estrutura condicional Caso (switch) para identificar
+                    a opção escolhida pelo usuário e executar uma ação diferente para cada escolha.
                 </p>
 
-                <img src="imgs/imgExemploCasoDia.png" alt="">
+                <img src="imgs/imgExemploCasoDia.png" alt="tutyutyuytutyutyutyut">
 
                 <br><button onclick="alternarCodigo(this)">Ver código</button>
                 <pre class="bloco-codigo" style="display: none;">
                     <code>
-                        let numero;
+                        let opcao;
 
-                        dia = prompt("Digite um número de 1 a 3:");
+                        opcao = prompt("Digite uma opção: 1, 2 ou 3");
 
-                        switch (dia) {
+                        switch (opcao) {
                         case "1":
-                            alert("Domingo");
+                            alert("Estruturas Condicionais");
                             break;
 
                         case "2":
-                            alert("Segunda-feira");
+                            alert("Estruturas de Repetição");
                             break;
 
                         case "3":
-                            alert("Terça-feira");
+                            alert("Vetores");
                             break;
 
                         default:
-                            alert("Dia inválido");}
+                        alert("Opção inválida")};
                     </code>
                 </pre>
-            </div>
 
-            <h4>Exemplo 02</h4>
-            <p>Neste programa, a variável opcao é criada inicialmente sem receber um valor. Em seguida,
-                o comando prompt() solicita que o usuário digite uma opção entre 1, 2 ou 3.
-                Depois que o usuário informa sua escolha, a estrutura switch verifica o valor digitado
-                e compara com cada uma das opções disponíveis.
-                <br><br>Se o usuário digitar 1, o programa informa 
-                "Estruturas Condicionais". 
-                <br>Se digitar 2, será exibida a mensagem "Estruturas de Repetição".
-                <br>Caso digite 3, o programa mostrará "Vetores".
-                <br><br>aaaaaaaaaaaaaaaaaaaaaaaaaaaaApós executar a opção correspondente, o comando break encerra aquele caso,
-                evitando que os próximos casos sejam executados. Caso o usuário digite um valor diferente
-                de 1, 2 ou 3, o default será executado e mostrará a mensagem "Opção inválida".
-                Dessa forma, o programa utiliza a estrutura condicional Caso (switch) para identificar
-                a opção escolhida pelo usuário e executar uma ação diferente para cada escolha.
-            </p>
-
-            <img src="imgs/imgExemploCasoDia.png" alt="tutyutyuytutyutyutyut">
-
-            <br><button onclick="alternarCodigo(this)">Ver código</button>
-            <pre class="bloco-codigo" style="display: none;">
-                <code>
-                    let opcao;
-
-                    opcao = prompt("Digite uma opção: 1, 2 ou 3");
-
-                    switch (opcao) {
-                    case "1":
-                        alert("Estruturas Condicionais");
-                        break;
-
-                    case "2":
-                        alert("Estruturas de Repetição");
-                        break;
-
-                    case "3":
-                        alert("Vetores");
-                        break;
-
-                    default:
-                    alert("Opção inválida")};
-                </code>
-            </pre>
-
-            <h4>Atividade 01 — Dia da semana</h4>
-            <p>Digite um número inteiro de ( 1 a 3 ) e clique em "Verificar" para saber qual dia da semana corresponde.</p>
-                
-            <div class="subsecao" data-secao="atividade">
-                <div class="atividade-caixa">
-                    <label for="inputDiaSemana">Dia da semana: </label>
-                    <input type="number" id="inputDiaSemana" placeholder="Digite um número ">
-                    <button onclick="verificarDiaSemana()">Verificar</button>
-                    <p id="resultadoSemana" class="resultado"></p>
-                </div>
-                
-                <h4>Atividade 02 — Aprovação do aluno</h4>
-                <p>Digite um número inteiro de ( 1 a 3 ) e clique em "Verificar" para saber qual opção ela corresponde.</p>
-                
-                <div class="atividade-caixa">
-                    <label for="inputOpcao">Nota: </label>
-                    <input type="number" id="inputOpcao" step="0.1" placeholder="Digite um número ">
-                    <button onclick="verificarOpcao()">Verificar</button>
-                    <p id="resultadoOpcao" class="resultado"></p>
+                <h4>Atividade 01 — Dia da semana</h4>
+                <p>Digite um número inteiro de ( 1 a 3 ) e clique em "Verificar" para saber qual dia da semana corresponde.</p>
+                    
+                <div class="subsecao" data-secao="atividade">
+                    <div class="atividade-caixa">
+                        <label for="inputDiaSemana">Dia da semana: </label>
+                        <input type="number" id="inputDiaSemana" placeholder="Digite um número ">
+                        <button onclick="verificarDiaSemana()">Verificar</button>
+                        <p id="resultadoSemana" class="resultado"></p>
+                    </div>
+                    
+                    <h4>Atividade 02 — Aprovação do aluno</h4>
+                    <p>Digite um número inteiro de ( 1 a 3 ) e clique em "Verificar" para saber qual opção ela corresponde.</p>
+                    
+                    <div class="atividade-caixa">
+                        <label for="inputOpcao">Nota: </label>
+                        <input type="number" id="inputOpcao" step="0.1" placeholder="Digite um número ">
+                        <button onclick="verificarOpcao()">Verificar</button>
+                        <p id="resultadoOpcao" class="resultado"></p>
+                    </div>
                 </div>
             </div>
         </div>

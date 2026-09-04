@@ -13,10 +13,7 @@
 <body>
 
     <header>
-
-        <!-- <img src="imgs/logo.png" alt="logo da página" titly="logo da página"> -->
         <h1>Estruturas de Repetição</h1>
-
     </header>
 
     <div class="continerMenu">
@@ -31,18 +28,18 @@
             <a href="estruturaRepeticao.html">
                 <div class="opcao">Estrutura de Repetição</div>
             </a>
-            <a href="estruturaVetrores.html">
+            <a href="estruturaVetores.html">
                 <div class="opcao">Estrutura de Vetror</div>
             </a>
         </nav>
         
     </div>
 
-    <section>
+    <section section class="conteudo-repeticao">
         <nav>
             <a href="#" class="opcao-lateral" onclick="mostrarConteudo('enquanto')">Estrutura Equanto</a>
             <br><a href="#" class="opcao-lateral" onclick="mostrarConteudo('facaEnquanto')">Estrutura Faça...Enquanto</a>
-            <br><a href="#" class="opcao-lateral" onclick="mostrarConteudo('para')">Estrutura Para</a>
+            <br><a href="#" class="opcao-lateral" onclick="mostrarConteudo('para')">Estrutura Para...faça</a>
         </nav>
 
         <div class="painel-lateral">
@@ -262,8 +259,54 @@
 
             <div class="subsecao" data-secao="exemplo">
                 <h4>Exemplo 01</h4>
-                <p>
+                <p>paragrafo do exemplo 01 
                 </p>
+                <img src="imgs/imgExemploCasoDia.png" alt="">
+                <br><button onclick="alternarCodigo(this)">Ver código</button>
+                    <pre class="bloco-codigo" style="display: none;">
+                        <code>
+                            let parafaca
+                        </code>
+                    </pre>
+
+                <h4>Exemplo 02</h4>
+                <p>paragrafo do exemplo 02
+                </p>
+
+                <img src="imgs/imgExemploCasoDia.png" alt="">
+
+                <br><button onclick="alternarCodigo(this)">Ver código</button>
+                <pre class="bloco-codigo" style="display: none;">
+                    <code>
+                        let parafaca;
+
+                    </code>
+                </pre>
+                <h4>Atividade 01 — </h4>
+                <p>
+                        aqui
+                </p>
+                <div class="subsecao" data-secao="atividade">
+                    <div class="atividade-caixa">
+                        <label for="inputIdade">Idade: </label>
+                        <input type="number" id="inputIdade" placeholder="Digite um número">
+                        <button onclick="verificarIdade()">Verificar</button>
+                        <p id="resultadoIdade" class="resultado"></p>
+                    </div>
+                </div>
+                <h4>Atividade 02 — </h4>
+                <p>
+                        aqui
+                </p>
+                <div class="subsecao" data-secao="atividade">
+                    <div class="atividade-caixa">
+                        <label for="inputIdade">Idade: </label>
+                        <input type="number" id="inputIdade" placeholder="Digite um número">
+                        <button onclick="verificarIdade()">Verificar</button>
+                        <p id="resultadoIdade" class="resultado"></p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

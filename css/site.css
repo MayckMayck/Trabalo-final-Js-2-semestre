@@ -121,12 +121,12 @@ p {
 }
 
 /*css que manipula painel lateral*/
-.conteudo-condicional {
+.conteudo-condicional .conteudo-repeticao {
     display: flex;
     gap: 20px;
 }
 
-.conteudo-condicional nav {
+.conteudo-condicional .conteudo-repeticao nav {
     display: flex;
     flex-direction: column;
     width: 200px;
