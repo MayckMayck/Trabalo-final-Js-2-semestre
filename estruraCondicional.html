@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html leng="pt-br">
+<html lang="pt-br">
 
 <head>
     <meta chaset="UTF-8">
     <meta name="viewport" content="width=device-width, instal-scale=1.0">
-
     <title>Estruturas Condicionais</title>
     <link rel="stylesheet" type="text/css" href="css/site.css">
 
@@ -18,151 +17,407 @@
 
     </header>
 
-    <nav>
-        <!-- A tag nav cria uma área para navegação como menus e outros -->
-        <a href="pagPrincipal.html">
-            <div class="opcao">Pagina Inicial</div>
-        </a>
-
-        <a href="estruraCondicional.html">
-            <div class="opcao">Estrutura Condicionais</div>
-        </a>
-
-        <a href="estruturaRepeticao.html">
-            <div class="opcao">Estrutura de Repetição</div>
-        </a>
-
-        <a href="estruturaVetrores.html">
-            <div class="opcao">Estrutura de Vetrores</div>
-        </a>
-    </nav>
-
-    <section>
+    <div class="continerMenu">
         <nav>
-            <a href="estruturaSe.html">Estrutura Se</a>
-            <a href="estruturaCaso.html">Estrutura Caso</a>
+            <!-- A tag nav cria uma área para navegação como menus e outros -->
+            <a href="paginaInicial.html">
+                <div class="opcao">Página Inicial</div>
+            </a>
+            <a href="estruraCondicional.html">
+                <div class="opcao">Estrutura Condicionais</div>
+            </a>
+            <a href="estruturaRepeticao.html">
+                <div class="opcao">Estrutura de Repetição</div>
+            </a>
+            <a href="estruturaVetrores.html">
+                <div class="opcao">Estrutura de Vetror</div>
+            </a>
+
         </nav>
-    </section>
+    </div>
 
     <!-- a tag section define uma seção dos conteúdos de uma página. -->
-     
-         <h2>h2</h2>
-       
+    <section class="conteudo-condicional">
+        <nav>
+            <a href="#" class="opcao-lateral" onclick="mostrarConteudo('se')">Estrutura Se</a>
+            <br><a href="#" class="opcao-lateral" onclick="mostrarConteudo('caso')">Estrutura Caso</a>
+        </nav>
+
+        <div class="painel-lateral">
+
+            <!-- Conteúdo: Estrutura Se -->
+            <div id="conteudo-se" class="conteudo-item" data-tipo="se">
+
+                <h3>Estrutura Se</h3>
+                <p>Estrutura Condicional Se (if).
+                    A estrutura condicional Se, representada em JavaScript pelo comando if, 
+                    é utilizada quando o programa precisa tomar uma decisão com base em uma condição.
+                    O programa verifica se uma determinada expressão é verdadeira ou falsa e,
+                    dependendo do resultado, executa uma ação.  
+                    Por exemplo, podemos verificar se uma pessoa possui 18 anos ou mais.
+                    Caso essa condição seja verdadeira, o programa pode informar que a pessoa é maior de idade.
+                    Também podemos utilizar o comando else, que significa senão,
+                    para definir o que acontecerá caso a condição seja falsa.
+                    Outro exemplo seria verificar a nota de um aluno. Se a nota for maior ou igual a 7, 
+                    o programa pode informar que o aluno está aprovado. Caso contrário, 
+                    pode informar que ele não atingiu a nota necessária.
+                    Dessa forma, a estrutura Se permite que o programa tome decisões
+                    diferentes de acordo com as informações recebidas.
+                </p>
+                    
+                <div class="botoes-acao">
+                    <button onclick="irPara(this, 'exemplo')">Exemplo</button>
+                    <button onclick="irPara(this, 'atividade')">Atividade</button>
+                </div>
+
+                <div class="subsecao" data-secao="exemplo">
+
+                    <h4>Exemplo 01</h4>
+
+                    <p>Estrutura condicional – Maior de idade
+                        Nesse exemplo, utilizamos a estrutura condicional "if/else" para verificar a idade de uma pessoa.
+                        <br><br>1. Primeiro, o usuário informa sua idade por meio do campo de entrada do HTML.
+                        <br>2. O JavaScript recebe esse valor e verifica a condição.
+                        <br>3. Com o "if", verificamos se a idade é maior ou igual a 18 anos.
+                        <br>4. Se a condição for verdadeira, o programa mostra uma mensagem 
+                        informando que a pessoa é maior de idade.
+                        <br>5. Caso a condição seja falsa, o "else" é executado e o programa 
+                        informa que a pessoa é menor de idade.
+                        <br><br>Dessa forma, a estrutura "if/else" permite que o programa tome
+                        uma decisão de acordo com o valor informado pelo usuário.
+                    </p>
+
+                    <img src="imgs/imgExemploSeMaiorIdade.png" alt="imagem de exemplo que mostra a estrutura SE..SENAO">
+
+                    <br><button onclick="alternarCodigo(this)">Ver código</button>
+
+                    <pre class="bloco-codigo" style="display: none;">
+                        <code>
+                            let idade = prompt("Por favor, digite a sua idade:"); 
+
+                            idade = parseInt(idade);
+
+                            if (idade >= 18) {
+                                alert("Você é maior de idade.");
+                            } else {
+                                alert("Você é menor de idade.");
+                            }
+                        </code>
+                    </pre>
+            
+                    <h4>Exemplo 02</h4>
+
+                    <p>Estrutura condicional – Aprovação ou reprovação
+                        Nesse exemplo, utilizamos a estrutura condicional "if/else" para verificar a nota de um aluno.
+                        <br><br>1. Primeiro, o aluno informa sua nota no campo de entrada do HTML.
+                        <br>2. O JavaScript recebe a nota informada.
+                        <br>3. O "if" verifica se a nota é maior ou igual a 7.
+                        <br>4. Se a condição for verdadeira, o programa mostra a mensagem “Aprovado”.
+                        <br>5. Se a condição for falsa, o "else" é executado e o programa mostra a mensagem “Reprovado”.
+                        <br><br>Assim, o programa utiliza uma condição para analisar a nota e determinar automaticamente 
+                        o resultado do aluno.
+                    </p>
+
+                    <img src="imgs/imgExemploSeNota.png" alt="imagem de exemplo que mostra a estrutura SE...SENAO">
+
+                    <br><button onclick="alternarCodigo(this)">Ver código</button>
+                    <pre class="bloco-codigo" style="display: none;"><code>
+                        let nota = prompt("Digite a nota do aluno (de 0 a 10): ");
+
+                        nota = parseFloat(nota);
+
+                        if (nota >= 7.0) {
+                            alert("Aluno aprovado! Parabéns.");
+                        } else {
+                            alert("Aluno em recuperação. Precia etudar mai. ");
+                        }</code></pre>
+                </div>
+
+                <h4>Atividade 01 — Maior de idade</h4>
+                <p>Digite uma idade e clique em "Verificar" para saber se a pessoa é maior ou
+                     menor de idade.</p>
+
+                <div class="subsecao" data-secao="atividade">
+                    <div class="atividade-caixa">
+                        <label for="inputIdade">Idade: </label>
+                        <input type="number" id="inputIdade" placeholder="Digite a idade">
+                        <button onclick="verificarIdade()">Verificar</button>
+                        <p id="resultadoIdade" class="resultado"></p>
+                    </div>
+
+                        <h4>Atividade 02 — Aprovação do aluno</h4>
+                        <p>Digite a nota do aluno e clique em "Verificar" para saber se ele foi aprovado ou reprovado.</p>
+
+                <div class="atividade-caixa">
+                    <label for="inputNota">Nota: </label>
+                    <input type="number" id="inputNota" step="0.1" placeholder="Digite a nota (0 a 10)">
+                    <button onclick="verificarNota()">Verificar</button>
+                    <p id="resultadoNota" class="resultado"></p>
+                </div>
+            </div>
+        </div>    
+
+        <!-- Conteúdo: Estrutura Caso -->
+        <div id="conteudo-caso" class="conteudo-item" data-tipo="caso">
+
+            <h3>Estrutura Caso</h3>
+            
+            <p>Estrutura Condicional Caso(switch)
+                A estrutura condicional Caso, representada em JavaScript pelo comando switch, 
+                é utilizada quando precisamos trabalhar com várias opções diferentes. 
+                Ela verifica o valor de uma variável e executa uma ação específica para cada possibilidade encontrada.
+                Por exemplo, imagine um sistema que possui um menu de opções:
+                <br><br>1 — Estruturas Condicionais
+                <br>2 — Estruturas de Repetição
+                <br>3 — Vetores
+                <br><br>Ao escolher uma das opções, o programa verifica qual número foi informado e executa o conteúdo correspondente. Para cada possibilidade utilizamos o case, que representa cada caso ou opção.
+                Também podemos utilizar o default, que será executado caso nenhuma das opções informadas seja encontrada.
+                A estrutura Caso é muito útil para criar menus, sistemas com opções, escolha de dias da semana, meses ou diferentes alternativas. Ela ajuda a organizar o código quando existem várias possibilidades específicas.</p>
+
+            <div class="botoes-acao">
+                <button onclick="irPara(this, 'exemplo')">Exemplo</button>
+                <button onclick="irPara(this, 'atividade')">Atividade</button>
+            </div>
+
+            <div class="subsecao" data-secao="exemplo">
+
+                <h4>Exemplo 01</h4>
+                <p>O que está acontecendo no programa?
+                    Neste programa, a variável dia é criada sem possuir um valor inicial. 
+                    Em seguida, o comando prompt() solicita que o usuário digite um número
+                    correspondente a um dia da semana.
+                    <br>Depois que o usuário informa o número, a estrutura switch verifica qual foi a opção
+                    digitada e compara esse valor com os diferentes case disponíveis.
+                    <br><br>Caso o usuário digite 1, será exibido Domingo;<br> se digitar 2, 
+                    será exibido Segunda-feira;<br> e se digitar 3, será exibido Terça-feira.
+                    <br></br>Após encontrar a opção correta, o comando break encerra a execução da estrutura switch,
+                    impedindo que os outros casos sejam executados. Caso o usuário digite um número 
+                    diferente das opções disponíveis, o default será executado e mostrará a mensagem "Dia inválido".
+                    Dessa forma, o programa utiliza a estrutura condicional Caso (switch) para tomar
+                    uma decisão de acordo com a opção escolhida pelo usuário.
+                </p>
+
+                <img src="imgs/imgExemploCasoDia.png" alt="">
+
+                <br><button onclick="alternarCodigo(this)">Ver código</button>
+                <pre class="bloco-codigo" style="display: none;">
+                    <code>
+                        let numero;
+
+                        dia = prompt("Digite um número de 1 a 3:");
+
+                        switch (dia) {
+                        case "1":
+                            alert("Domingo");
+                            break;
+
+                        case "2":
+                            alert("Segunda-feira");
+                            break;
+
+                        case "3":
+                            alert("Terça-feira");
+                            break;
+
+                        default:
+                            alert("Dia inválido");}
+                    </code>
+                </pre>
+            </div>
+
+            <h4>Exemplo 02</h4>
+            <p>Neste programa, a variável opcao é criada inicialmente sem receber um valor. Em seguida,
+                o comando prompt() solicita que o usuário digite uma opção entre 1, 2 ou 3.
+                Depois que o usuário informa sua escolha, a estrutura switch verifica o valor digitado
+                e compara com cada uma das opções disponíveis.
+                <br><br>Se o usuário digitar 1, o programa informa 
+                "Estruturas Condicionais". 
+                <br>Se digitar 2, será exibida a mensagem "Estruturas de Repetição".
+                <br>Caso digite 3, o programa mostrará "Vetores".
+                <br><br>aaaaaaaaaaaaaaaaaaaaaaaaaaaaApós executar a opção correspondente, o comando break encerra aquele caso,
+                evitando que os próximos casos sejam executados. Caso o usuário digite um valor diferente
+                de 1, 2 ou 3, o default será executado e mostrará a mensagem "Opção inválida".
+                Dessa forma, o programa utiliza a estrutura condicional Caso (switch) para identificar
+                a opção escolhida pelo usuário e executar uma ação diferente para cada escolha.
+            </p>
+
+            <img src="imgs/imgExemploCasoDia.png" alt="tutyutyuytutyutyutyut">
+
+            <br><button onclick="alternarCodigo(this)">Ver código</button>
+            <pre class="bloco-codigo" style="display: none;">
+                <code>
+                    let opcao;
+
+                    opcao = prompt("Digite uma opção: 1, 2 ou 3");
+
+                    switch (opcao) {
+                    case "1":
+                        alert("Estruturas Condicionais");
+                        break;
+
+                    case "2":
+                        alert("Estruturas de Repetição");
+                        break;
+
+                    case "3":
+                        alert("Vetores");
+                        break;
+
+                    default:
+                    alert("Opção inválida")};
+                </code>
+            </pre>
+
+            <h4>Atividade 01 — Dia da semana</h4>
+            <p>Digite um número inteiro de ( 1 a 3 ) e clique em "Verificar" para saber qual dia da semana corresponde.</p>
+                
+            <div class="subsecao" data-secao="atividade">
+                <div class="atividade-caixa">
+                    <label for="inputDiaSemana">Dia da semana: </label>
+                    <input type="number" id="inputDiaSemana" placeholder="Digite um número ">
+                    <button onclick="verificarDiaSemana()">Verificar</button>
+                    <p id="resultadoSemana" class="resultado"></p>
+                </div>
+                
+                <h4>Atividade 02 — Aprovação do aluno</h4>
+                <p>Digite um número inteiro de ( 1 a 3 ) e clique em "Verificar" para saber qual opção ela corresponde.</p>
+                
+                <div class="atividade-caixa">
+                    <label for="inputOpcao">Nota: </label>
+                    <input type="number" id="inputOpcao" step="0.1" placeholder="Digite um número ">
+                    <button onclick="verificarOpcao()">Verificar</button>
+                    <p id="resultadoOpcao" class="resultado"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- botao que volta ao topo da poagina -->
+<button id="btnTopo" onclick="voltarAoTopo()" title="Voltar ao topo">↑</button>
+
+<script>
+    function mostrarConteudo(tipo) {
+        document.querySelectorAll('.conteudo-item').forEach(function (item) {item.classList.remove('ativo');});
+        document.getElementById('conteudo-' + tipo).classList.add('ativo');
+    }
+        //botoes exemplo/atividade de foco
+    function irPara(botao, secao) {
+        const container = botao.closest('.conteudo-item');
+        const destino = container.querySelector('[data-secao="' + secao + '"]');
+        if (destino) {
+            destino.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    function alternarCodigo(botao) {
+        const codigo = botao.nextElementSibling;
+        if (codigo.style.display === 'none') {
+            codigo.style.display = 'block';
+            botao.textContent = 'Esconder código';
+        } else {
+            codigo.style.display = 'none';
+            botao.textContent = 'Ver código';
+        }
+    }
+        // atividade verifica idade
+    function verificarIdade() {
+        let idade = document.getElementById('inputIdade').value;
+        idade = parseInt(idade);
+
+        const resultado = document.getElementById('resultadoIdade');
+
+        if (isNaN(idade)) {
+            resultado.textContent = 'Por favor, digite uma idade válida.';
+            return;
+        }
+
+        if (idade >= 18) {
+            resultado.textContent = 'Você é maior de idade.';
+        } else {
+            resultado.textContent = 'Você é menor de idade.';
+        }
+    }
+
+        // atividade valida nota
+    function verificarNota() {
+        let nota = document.getElementById('inputNota').value;
+        nota = parseFloat(nota);
+
+        const resultado = document.getElementById('resultadoNota');
+
+        if (isNaN(nota)) {
+            resultado.textContent = 'Por favor, digite uma nota válida.';
+            return;
+        }
+
+        if (nota >= 7.0) {
+            resultado.textContent = 'Aluno aprovado! Parabéns.';
+        } else {
+            resultado.textContent = 'Aluno em recuperação. Precisa estudar mais.';
+        }
+    }
+    function verificarDiaSemana(){
+        let dia = document.getElementById('inputDiaSemana').value;
+        dia = parseInt(dia);
+
+        const resultado = document.getElementById('resultadoSemana');
+
+        switch (dia) {
+            case 1:
+                resultado.textContent = 'Domingo';
+                break;
+            case 2:
+                resultado.textContent = 'Segunda-feira';
+                break;
+            case 3:
+                resultado.textContent = 'Terça-feira';
+                break;
+            default:
+                resultado.textContent = 'Dia inválido. Digite um número de 1 a 3.';
+        }
+    }
+
+    function verificarOpcao(){
+        let opcao = document.getElementById('inputOpcao').value;
+        opcao = parseInt(opcao);
+
+        const resultado = document.getElementById('resultadoOpcao');
+
+        switch (opcao) {
+            case 1:
+                resultado.textContent = 'Estruturas Condicionais';
+                break;
+            case 2:
+                resultado.textContent = 'Estruturas de Repetição';
+                break;
+            case 3:
+                resultado.textContent = 'Vetores';
+                break;
+            default:
+                resultado.textContent = 'Opção inválida. Digite um número de 1 a 3.';
+        }
+    }
+
+    function voltarAoTopo() {
+         window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+            // Mostra o botão só depois de rolar um pouco a página
+            window.onscroll = function () {
+                const btn = document.getElementById('btnTopo');
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    btn.style.display = 'block';
+                } else {
+                    btn.style.display = 'none';
+                }
+            };
+        
+
+    </script>
+
     <!-- A tag footer define a criação de um rodapé. -->
-  
   <footer>Copyright &copy; GR SADP 2026/1 </footer>
 
 </body>
-<script></script>
 </html>
 
 
-
-
-<!-- <table class="filmes">
-    <thead>
-        <tr>
-            <th colspan="5" class="filme">.</th>
-        </tr>
-        <th>Filme</th>
-        <th>Lançamento</th>
-        <th>hosras</th>
-        <th>Oscar</th>
-        <th>IMDB</th>
-    </thead>
-    <tbody>
-        <td>Harry Potter e a Pedra Filosofal</td>
-        <td>2001</td>
-        <td>2h 32m</td>
-        <td>3 indicaçoes</td>
-        <td>&#9733 7.7 </td>
-        <tr>
-            <td>Harry Potter e a Câmara Secreta</td>
-            <td>2002</td>
-            <td>2h 41m</td>
-            <td>0 indicação</td>
-            <td>&#9733 7.5</td>
-        </tr>
-        <tr>
-            <td>Harry Potter e o Prisioneiro de azkaban</td>
-            <td>2004</td>
-            <td>2h 22m</td>
-            <td>2 indicaçoes</td>
-            <td>&#9733 7.9</td>
-        </tr>
-        <tr>
-            <td>Harry Potter e o Cálice de Fogo</td>
-            <td>2005</td>
-            <td>2h 37m</td>
-            <td>1 indicação</td>
-            <td>&#9733 7.7</td>
-        </tr>
-        <tr>
-            <td>Harry Potter e a Ordem da Fênix</td>
-            <td>2007</td>
-            <td>2h 18m</td>
-            <td>0 indicação</td>
-            <td>&#9733 7.5</td>
-        </tr>
-        <tr>
-            <td>Harry potter e o Enigma do Príncipe</td>
-            <td>2009</td>
-            <td>2h 33m</td>
-            <td>1 indicação</td>
-            <td>&#9733 7.6</td>
-        </tr>
-        <tr>
-            <td>Harry Potter e as Relíquias da Morte: Parte 1</td>
-            <td>2010</td>
-            <td>2h 26m</td>
-            <td>1 indicação</td>
-            <td>&#9733 7.7</td>
-        </tr>
-        <tr>
-            <td>Harry Potter e as Relíquias da Morte: Parte 2</td>
-            <td>2011</td>
-            <td>2h 10m</td>
-            <td>3 indicaçoes</td>
-            <td>&#9733 8.1</td>
-        </tr>
-    </tbody>
-    <table class="filmes">
-        <thead>
-            <tr>
-                <th colspan="5">Escola de Magia e Bruxaria de Hogwarts</th>
-            </tr>
-            <tr>
-                <th>Casas</th>
-                <th>Fundadores</th>
-                <th>Professor Responsavel</th>
-                <th>Taça de Quadribol</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Sonserina</td>
-                <td>Salazar Slytherin</td>
-                <td>Severus Snape</td>
-                <td>0+</td>
-            </tr>
-            <tr>
-                <td>Corvinal</td>
-                <td>Rowena Ravenclaw</td>
-                <td>Filius Flitwick</td>
-                <td>0+</td>
-            </tr>
-            <tr>
-                <td>Lufa-Lufa</td>
-                <td>Helga Hufflepuff</td>
-                <td>Pomona Sprout</td>
-                <td>1+</td>
-            </tr>
-            <tr>
-                <td>Grifinória</td>
-                <td>Godric Gryffindor</td>
-                <td>Minerva McGonagall</td>
-                <td>5+</td>
-            </tr>
-        </tbody>
-    </table>
-</table> -->

@@ -19,29 +19,298 @@
 
     </header>
 
-    <nav>
-        <!-- A tag nav cria uma área para navegação como menus e outros -->
-        <a href="pagPrincipal.html">
-            <div class="opcao">Pagina Inicial</div>
-        </a>
+    <div class="continerMenu">
+        <nav>
+            <!-- A tag nav cria uma área para navegação como menus e outros -->
+            <a href="paginaInicial.html">
+                <div class="opcao">Página Inicial</div>
+            </a>
+            <a href="estruraCondicional.html">
+                <div class="opcao">Estrutura Condicionais</div>
+            </a>
+            <a href="estruturaRepeticao.html">
+                <div class="opcao">Estrutura de Repetição</div>
+            </a>
+            <a href="estruturaVetrores.html">
+                <div class="opcao">Estrutura de Vetror</div>
+            </a>
+        </nav>
+        
+    </div>
 
-        <a href="estruraCondicional.html">
-            <div class="opcao">Estruturas Condicionais</div>
-        </a>
-
-        <a href="estruturaRepeticao.html">
-            <div class="opcao">Estrutura de Repetição</div>
-        </a>
-
-        <a href="estruturaVetrores.html">
-            <div class="opcao">Estrutura de Vetrores</div>
-        </a>
-    </nav>
     <section>
-        <h1>h1</h1>
-        <h2>h2</h2>
+        <nav>
+            <a href="#" class="opcao-lateral" onclick="mostrarConteudo('enquanto')">Estrutura Equanto</a>
+            <br><a href="#" class="opcao-lateral" onclick="mostrarConteudo('facaEnquanto')">Estrutura Faça...Enquanto</a>
+            <br><a href="#" class="opcao-lateral" onclick="mostrarConteudo('para')">Estrutura Para</a>
+        </nav>
+
+        <div class="painel-lateral">
+            <!-- Conteúdo: Estrutura Se -->
+            <div id="conteudo-enquanto" class="conteudo-item" data-tipo="enquanto">
+
+                <h3>Estrutura enquanto</h3>
+                <p>Uma estrutura de repetição é um recurso utilizado na programação para fazer com que
+                    um determinado conjunto de comandos seja executado várias vezes. Ela é importante 
+                    porque permite repetir tarefas automaticamente, sem a necessidade de escrever o mesmo
+                    comando diversas vezes.
+                    As estruturas de repetição são utilizadas quando precisamos realizar uma ação várias 
+                    vezes, como contar números, percorrer uma lista ou repetir uma tarefa enquanto 
+                    determinada condição for verdadeira.
+                    Existem diferentes tipos de estruturas de repetição, como “enquanto” (while), 
+                    “para” (for) e “faça... enquanto” (do while). Cada uma possui uma forma diferente 
+                    de determinar quando a repetição deve começar e terminar. 
+                    Por exemplo, a estrutura “enquanto” executa os comandos enquanto uma determinada 
+                    condição for verdadeira. Quando essa condição se torna falsa, a repetição é encerrada.                   
+                    Dessa forma, as estruturas de repetição tornam os programas mais rápidos,
+                    organizados e eficientes, evitando a repetição desnecessária de códigos e
+                    facilitando a realização de tarefas que precisam ser executadas várias vezes.
+                </p>
+
+                <div class="botoes-acao">
+                    <button onclick="irPara(this, 'exemplo')">Exemplo</button>
+                    <button onclick="irPara(this, 'atividade')">Atividade</button>
+                </div>
+
+                <div class="subsecao" data-secao="exemplo">
+                    <h4>Exemplo 01</h4>
+                    <p>A estrutura de repetição “enquanto”, também conhecida como while, 
+                        é utilizada na programação quando queremos repetir um determinado conjunto
+                        de comandos enquanto uma condição for verdadeira.
+                        Seu funcionamento é simples: o programa verifica uma condição antes de 
+                        executar os comandos. Se a condição for verdadeira, os comandos são executados e,
+                        em seguida, a condição é verificada novamente. Esse processo continua se repetindo
+                        até que a condição se torne falsa.
+                    </p>
+
+                    <!-- colocar imagem com exemplo da estrutura enquanto  -->
+                    <img src="imgs/imgExemploEnquantoSorteio.png" alt="imagem exemplo de estrura de repetição enquanto">
+                   
+                    <br><button onclick="alternarCodigo(this)">Ver código</button>
+                    <pre class="bloco-codigo" style="display: none;">
+                        <code>
+                           // Math.random() gera um número decimal entre 0 e 1.
+                            //Math.floor(Math.random() * 10) + 1 transforma isso em um número inteiro de 1 a 10.
+                            let numeroSorteado:
+                            let tentativas = 0;
+
+                            while (numeroSorteado !== 7) {
+                                numeroSorteado = Math.floor(Math.random() * 10) + 1;
+                                tentativas++;
+                                conosle.log(""Tentativa: " + tentativas + " - Número sorteado: " + numeroSorteado);
+                            }
+                            alert("Acertou! O número 7 saiu na tentativa" +tentativas);
+                        </code>
+                    </pre>
+
+                    <h4>Exemplo 02</h4>
+                    <p>Este código em JavaScript demonstra o uso da estrutura de repetição while (enquanto) para 
+                        resolver um problema comum: somar uma sequência de números informados pelo usuário, sem saber 
+                        previamente quantos valores serão digitados.
+                        O programa fica perguntando números repetidamente através do prompt, acumulando cada 
+                        valor em uma variável de soma, até que o usuário digite 0, sinalizando o fim da entrada de dados.
+                        Esse é um exemplo clássico de quando o while é mais indicado do que o for: quando a quantidade de
+                        repetições depende de uma condição definida durante a execução (a escolha do usuário), 
+                        e não de um número fixo conhecido antecipadamente.
+                    </p>
+
+                    <img src="imgs/imgExemploEnquantoSoma.png" alt="Imagem exemplo de estrutura de repetição enquanto">
+
+                    <br><button onclick="alternarCodigo(this)">Ver código</button>
+                    <pre class="bloco-codigo" style="display: none;">
+                        <code>
+                            let numero;
+                            let soma = 0;
+
+                            while (numero !== 0) {
+                                numero = parseInt(prompt("Digite um número (ou 0 para parar): "));
+                                if (numero !== 0) {
+                                    soma += numero;
+                                }                               
+                            }
+                            alert("A soma total foi: " + soma);
+                        </code>
+                    </pre>
+
+                    <h4>Atividade 01 — Número sorteado</h4>
+                    <p>
+                            aqui
+                    </p>
+                    <div class="subsecao" data-secao="atividade">
+                        <div class="atividade-caixa">
+                            <label for="inputIdade">Idade: </label>
+                            <input type="number" id="inputIdade" placeholder="Digite um número">
+                            <button onclick="verificarIdade()">Verificar</button>
+                            <p id="resultadoIdade" class="resultado"></p>
+                        </div>
+                    </div>
+
+                    <h4>Atividade 02 — </h4>
+                    <p>Digite um número inteiro e o programa ira somar os números pares.</p>
+
+                    <div class="atividade-caixa">
+                        <label for="inputNota">Nota: </label>
+                        <input type="number" id="inputNota" step="0.1" placeholder="Digite a nota (0 a 10)">
+                        <button onclick="verificarNota()">Verificar</button>
+                        <p id="resultadoNota" class="resultado"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="conteudo-facaEnquanto" class="conteudo-item" data-tipo="facaEnquanto">
+            <h3>Estrutura Faça enquanto</h3>
+            <p>
+                A estrutura faça enquanto é parecida com o enquanto (while), mas com uma diferença 
+                importante: ela executa o bloco de código pelo menos uma vez, antes mesmo de verificar 
+                a condição. Só depois de rodar o bloco é que o programa checa se deve repetir ou não.
+                Isso é útil quando você precisa garantir que uma ação aconteça no mínimo uma vez — 
+                por exemplo, pedir uma senha ao usuário: você precisa perguntar pelo menos uma vez, 
+                e só depois verificar se ela está correta para decidir se pergunta de novo. 
+            </p>
+            <div class="botoes-acao">
+                <button onclick="irPara(this, 'exemplo')">Exemplo</button>
+                <button onclick="irPara(this, 'atividade')">Atividade</button>
+            </div>
+
+            <div class="subsecao" data-secao="exemplo">
+                <h4>Exemplo 01</h4>
+                <p>contador começa em 10.O bloco do executa primeiro (mostra o valor e diminui 1),
+                    e só depois verifica se contador > 0. Isso se repete até contador chegar a 0,
+                    quando a condição se torna falsa e o loop para.
+                    Repare que a lógica é igual à do while, mas aqui a execução acontece antes da 
+                    verificação.
+                </p>
+
+                <img src="imgs/imgExemploFaçaEnquantoMaiorIdade.png" alt="">
+
+                <br><button onclick="alternarCodigo(this)">Ver código</button>
+                    <pre class="bloco-codigo" style="display: none;">
+                        <code>
+                            let idade;
+
+                            do {
+
+                                idade = parseInt(prompt("Digite sua idade (Maior de 18) :"));  
+
+                            } while (idade < 18 || isNaN(idade));
+
+                            alert("Idade válida! Você tem " + idade + " anos.");
+                        </code>
+                    </pre>
+
+                <h4>Exemplo 02</h4>
+                <p>
+                    paragrafo
+                </p>
+
+                <img src="imgs/imgExemploFaçaEnquantoContadorRegrecivo.png" alt="Imagem exemplo estrutura de repetição faça enquanto">
+
+                <br><button onclick="alternarCodigo(this)">Ver código</button>
+                    <pre class="bloco-codigo" style="display: none;">
+                        <code>
+                            let contador = 10;
+
+                            do {
+                                console.og(contador);
+                                contador--
+                            } while (contador > 0);
+                            
+                            console.log("Fim da contagem!");
+                        </code>
+                    </pre>
+                
+                <h4>Atividade 01 — Maior de idade</h4>
+                <p>
+                        aqui
+                </p>
+                <div class="subsecao" data-secao="atividade">
+                    <div class="atividade-caixa">
+                        <label for="inputIdade">Idade: </label>
+                        <input type="number" id="inputIdade" placeholder="Digite um número">
+                        <button onclick="verificarIdade()">Verificar</button>
+                        <p id="resultadoIdade" class="resultado"></p>
+                    </div>
+                </div>
+            
+                <h4>Atividade 02 — Contador regrecivo</h4>
+                <p>
+                        aqui
+                </p>
+                <div class="subsecao" data-secao="atividade">
+                    <div class="atividade-caixa">
+                        <label for="inputIdade">Idade: </label>
+                        <input type="number" id="inputIdade" placeholder="Digite um número">
+                        <button onclick="verificarIdade()">Verificar</button>
+                        <p id="resultadoIdade" class="resultado"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="conteudo-para" class="conteudo-item" data-tipo="para">
+
+            <h3>Estrutura para</h3>
+            <p>
+                paragrafo
+            </p>
+
+            <div class="botoes-acao">
+                <button onclick="irPara(this, 'exemplo')">Exemplo</button>
+                <button onclick="irPara(this, 'atividade')">Atividade</button>
+            </div>
+
+            <div class="subsecao" data-secao="exemplo">
+                <h4>Exemplo 01</h4>
+                <p>
+                </p>
+            </div>
+        </div>
     </section>
-    
+
+    <button id="btnTopo" onclick="voltarAoTopo()" title="Voltar ao topo">↑</button>
+
+    <script>
+    function mostrarConteudo(tipo) {
+        document.querySelectorAll('.conteudo-item').forEach(function (item) {item.classList.remove('ativo');});
+        document.getElementById('conteudo-' + tipo).classList.add('ativo');
+    }
+        //botoes exemplo/atividade de foco
+    function irPara(botao, secao) {
+        const container = botao.closest('.conteudo-item');
+        const destino = container.querySelector('[data-secao="' + secao + '"]');
+        if (destino) {
+            destino.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    function alternarCodigo(botao) {
+        const codigo = botao.nextElementSibling;
+        if (codigo.style.display === 'none') {
+            codigo.style.display = 'block';
+            botao.textContent = 'Esconder código';
+        } else {
+            codigo.style.display = 'none';
+            botao.textContent = 'Ver código';
+        }
+    }
+  
+
+    function voltarAoTopo() {
+         window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+            // Mostra o botão só depois de rolar um pouco a página
+        window.onscroll = function () {
+            const btn = document.getElementById('btnTopo');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        };
+        
+
+    </script>
 
    
     <footer>Copyright &copy; GR SADP 2026/1 </footer>
