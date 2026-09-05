@@ -1,24 +1,31 @@
+<!-- .HTML  FEITO POR IA-->
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>página estrutura vetores</title>
+    <title>Estrutura de Vetores</title>
     <link rel="stylesheet" type="text/css" href="css/site.css">
 </head>
-
 <body>
-
+    <!-- CABEÇALHO -->
     <header>
-
         <h1>Estrutura de Vetores</h1>
-
     </header>
-
+    <!-- MENU PRINCIPAL -->
     <div class="continerMenu">
+        <div class="introducao">
+
+            <h3>Estruturas Condicionais</h3>
+            <p>Nesta página serão apresentadas as estruturas condicionais
+                utilizadas em JavaScript. Elas permitem que o programa
+                tome decisões de acordo com determinadas condições.
+                Serão abordadas estruturas como if, else e switch,
+                mostrando como utilizá-las para criar diferentes caminhos
+                dentro de um programa.
+            </p>
+        </div>
         <nav>
-            <!-- A tag nav cria uma área para navegação como menus e outros -->
             <a href="paginaInicial.html">
                 <div class="opcao">Página Inicial</div>
             </a>
@@ -29,24 +36,565 @@
                 <div class="opcao">Estrutura de Repetição</div>
             </a>
             <a href="estruturaVetores.html">
-                <div class="opcao">Estrutura de Vetror</div>
+                <div class="opcao">Estrutura de Vetores</div>
             </a>
         </nav>
     </div>
 
-    <!-- A tag section define uma seção dos conteúdos de uma página. -->
-    <section class="conteudo-vetor">
+
+    <!-- CONTEÚDO -->
+
+    <!-- <section class="conteudo-vetor">
+
+
+        MENU LATERAL 
+
         <nav>
-            <a href="#" class="opcao-lateral" onclick="mostrarConteudo('vetor')">Estrutura Equanto</a>
-            <br><a href="#" class="opcao-lateral" onclick="mostrarConteudo('matriz')">Estrutura Faça...Enquanto</a>
-            
+            <a href="#" class="opcao-lateral" onclick="mostrarConteudo('vetor')">Estrutura de Vetor
+            </a>
+            <a href="#" class="opcao-lateral" onclick="mostrarConteudo('matriz')">Estrutura de Matriz
+            </a>
         </nav>
-    </section>
 
-    <!-- A tag footer define a criação de um rodapé. -->
+         PAINEL LATERAL 
+        <div class="painel-lateral">
 
-    <footer>Copyright &copy; GR SADP 2026/1 </footer>
 
+            <!-- CONTEÚDO VETOR 
+
+            <div id="conteudo-vetor"
+                 class="conteudo-item"
+                 data-tipo="vetor">
+
+                <h3>Estrutura de Vetores</h3>
+
+                <p>
+
+                    Um vetor é uma estrutura utilizada para armazenar
+                    vários valores dentro de uma única variável.
+
+                    Em JavaScript, os vetores são representados
+                    principalmente pelos arrays.
+
+                    Isso permite armazenar diversos elementos,
+                    como nomes, números ou outras informações,
+                    dentro de uma mesma estrutura.
+
+                </p>
+
+
+                <div class="botoes-acao">
+
+                    <button onclick="irPara(this, 'exemplo')">
+                        Exemplo
+                    </button>
+
+                    <button onclick="irPara(this, 'atividade')">
+                        Atividade
+                    </button>
+
+                </div>
+
+
+                <!-- EXEMPLO 
+
+                <div class="subsecao"
+                     data-secao="exemplo">
+
+                    <h4>Exemplo 01</h4>
+
+                    <p>
+
+                        Neste exemplo criamos um vetor contendo
+                        algumas frutas.
+
+                        Cada fruta ocupa uma posição diferente
+                        dentro do vetor.
+
+                    </p>
+
+
+                    <br>
+
+                    <button onclick="alternarCodigo(this)">
+                        Ver código
+                    </button>
+
+
+                    <pre class="bloco-codigo"
+                         style="display: none;"><code>
+let frutas = ["Maçã", "Banana", "Laranja"];
+
+console.log(frutas);
+
+console.log(frutas[0]);
+console.log(frutas[1]);
+console.log(frutas[2]);
+                    </code></pre>
+
+
+                    <h4>Exemplo 02</h4>
+
+                    <p>
+
+                        Neste exemplo utilizamos um vetor para
+                        armazenar três números.
+
+                        Cada número pode ser acessado através
+                        de sua posição no vetor.
+
+                    </p>
+
+
+                    <br>
+
+                    <button onclick="alternarCodigo(this)">
+                        Ver código
+                    </button>
+
+
+                    <pre class="bloco-codigo"
+                         style="display: none;"><code>
+let numeros = [10, 20, 30];
+
+console.log(numeros);
+
+console.log(numeros[0]);
+console.log(numeros[1]);
+console.log(numeros[2]);
+                    </code></pre>
+
+                </div>
+
+
+                <!-- ATIVIDADE 
+
+                <div class="subsecao"
+                     data-secao="atividade">
+
+                    <h4>Atividade 01 — Vetor</h4>
+
+                    <p>
+
+                        Digite três nomes e clique no botão
+                        para visualizar os nomes armazenados
+                        no vetor.
+
+                    </p>
+
+
+                    <div class="atividade-caixa">
+
+                        <input
+                            type="text"
+                            id="nome1"
+                            placeholder="Primeiro nome">
+
+
+                        <input
+                            type="text"
+                            id="nome2"
+                            placeholder="Segundo nome">
+
+
+                        <input
+                            type="text"
+                            id="nome3"
+                            placeholder="Terceiro nome">
+
+
+                        <button onclick="criarVetor()">
+                            Criar vetor
+                        </button>
+
+
+                        <p
+                            id="resultadoVetor"
+                            class="resultado">
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTEÚDO MATRIZ 
+
+            <div id="conteudo-matriz"
+                 class="conteudo-item"
+                 data-tipo="matriz">
+
+                <h3>Estrutura de Matriz</h3>
+
+                <p>
+
+                    Uma matriz é uma estrutura semelhante ao vetor,
+                    porém organizada em duas ou mais dimensões.
+
+                    Podemos imaginar uma matriz como uma tabela
+                    formada por linhas e colunas.
+
+                    Ela é útil quando precisamos organizar
+                    informações em uma estrutura semelhante
+                    a uma tabela.
+
+                </p>
+
+
+                <div class="botoes-acao">
+
+                    <button onclick="irPara(this, 'exemplo')">
+                        Exemplo
+                    </button>
+
+                    <button onclick="irPara(this, 'atividade')">
+                        Atividade
+                    </button>
+
+                </div>
+
+
+                <!-- EXEMPLO MATRIZ 
+
+                <div class="subsecao"
+                     data-secao="exemplo">
+
+                    <h4>Exemplo 01</h4>
+
+                    <p>
+
+                        Neste exemplo criamos uma matriz contendo
+                        números organizados em linhas e colunas.
+
+                    </p>
+
+
+                    <br>
+
+                    <button onclick="alternarCodigo(this)">
+                        Ver código
+                    </button>
+
+
+                    <pre class="bloco-codigo"
+                         style="display: none;"><code>
+let matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+console.log(matriz);
+
+console.log(matriz[0][0]);
+console.log(matriz[1][1]);
+console.log(matriz[2][2]);
+                    </code></pre>
+
+
+                    <h4>Exemplo 02</h4>
+
+                    <p>
+
+                        Podemos utilizar uma matriz para
+                        representar informações organizadas
+                        em linhas e colunas.
+
+                    </p>
+                    <br>
+                    <button onclick="alternarCodigo(this)">
+                        Ver código
+                    </button>
+
+                    <pre class="bloco-codigo"
+                         style="display: none;"><code>
+                        let alunos = [
+                            ["João", 18],
+                            ["Maria", 20],
+                            ["Pedro", 19]
+                        ];
+
+                        console.log(alunos[0][0]);
+                        console.log(alunos[1][0]);
+                        console.log(alunos[2][0]);
+                    </code></pre>
+
+                </div>
+
+
+                <!-- ATIVIDADE MATRIZ 
+
+                <div class="subsecao"
+                     data-secao="atividade">
+
+                    <h4>Atividade — Matriz</h4>
+
+                    <p>
+
+                        Clique no botão para visualizar
+                        uma matriz de exemplo.
+
+                    </p>
+
+
+                    <div class="atividade-caixa">
+
+                        <button onclick="mostrarMatriz()">
+                            Mostrar matriz
+                        </button>
+
+
+                        <p
+                            id="resultadoMatriz"
+                            class="resultado">
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+<section class="area-conteudo">
+
+    <!-- INTRODUÇÃO -->
+
+    <!-- CONTEÚDO -->
+    <div class="conteudo-principal" id="conteudoPrincipal">
+
+        <!-- MENU LATERAL -->
+        <nav>
+
+            <a href="#" 
+               class="opcao-lateral"
+               onclick="mostrarPainel('if')">
+                IF
+            </a>
+
+            <a href="#" 
+               class="opcao-lateral"
+               onclick="mostrarPainel('ifelse')">
+                IF / ELSE
+            </a>
+
+            <a href="#" 
+               class="opcao-lateral"
+               onclick="mostrarPainel('switch')">
+                SWITCH
+            </a>
+
+        </nav>
+
+
+        <!-- PAINEL LATERAL -->
+        <div class="painel-lateral" id="painelLateral">
+
+            <button onclick="voltarIntroducao()">
+                ← Voltar
+            </button>
+
+            <div id="if" class="conteudo-item">
+
+                <h3>Estrutura IF</h3>
+
+                <p>
+                    A estrutura if permite executar um determinado
+                    bloco de código quando uma condição for verdadeira.
+                </p>
+
+            </div>
+
+
+            <div id="ifelse" class="conteudo-item">
+
+                <h3>Estrutura IF / ELSE</h3>
+
+                <p>
+                    A estrutura if / else permite escolher entre
+                    dois caminhos diferentes de execução.
+                </p>
+
+            </div>
+
+
+            <div id="switch" class="conteudo-item">
+
+                <h3>Estrutura SWITCH</h3>
+
+                <p>
+                    A estrutura switch permite verificar diferentes
+                    possibilidades para uma determinada expressão.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button id="btnTopo" onclick="voltarAoTopo()" title="Voltar ao topo"> ↑ </button>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function mostrarConteudo(tipo) {document.querySelectorAll('.conteudo-item')
+        .forEach(function(item) {item.classList.remove('ativo');});
+
+            const conteudo =
+                document.getElementById('conteudo-' + tipo);
+
+            if (conteudo) {
+
+                conteudo.classList.add('ativo');
+
+            }
+        }
+
+        function irPara(botao, secao) {
+
+            const container =
+                botao.closest('.conteudo-item');
+
+            const destino =
+                container.querySelector(
+                    '[data-secao="' + secao + '"]'
+                );
+
+            if (destino) {
+
+                destino.scrollIntoView({
+
+                    behavior: 'smooth',
+
+                    block: 'start'
+
+                });
+            }
+        }
+
+        function alternarCodigo(botao) {
+
+            const codigo =
+                botao.nextElementSibling;
+
+
+            if (codigo.style.display === 'none') {
+
+                codigo.style.display = 'block';
+
+                botao.textContent =
+                    'Esconder código';
+
+            } else {
+
+                codigo.style.display = 'none';
+
+                botao.textContent =
+                    'Ver código';
+
+            }
+        }
+
+        function criarVetor() {
+            let nome1 =
+                document.getElementById('nome1').value;
+
+            let nome2 =
+                document.getElementById('nome2').value;
+
+            let nome3 =
+                document.getElementById('nome3').value;
+
+            let vetor = [
+                nome1,
+                nome2,
+                nome3
+            ];
+
+            document.getElementById(
+                'resultadoVetor'
+            ).textContent =
+                'Vetor: [' + vetor.join(', ') + ']';
+        }
+
+        function mostrarMatriz() {
+            let matriz = [
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]
+            ];
+
+            document.getElementById(
+                'resultadoMatriz'
+            ).textContent =
+                'Matriz: ' +
+                matriz
+                    .map(linha => '[' + linha.join(', ') + ']')
+                    .join(' ');
+        }
+
+        function voltarAoTopo() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        window.onscroll = function() {
+            const btn =
+                document.getElementById('btnTopo');
+            if (
+                document.body.scrollTop > 100 ||
+                document.documentElement.scrollTop > 100
+            ) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        };
+        function mostrarPainel(tipo) {
+
+    // Esconde a introdução
+    document.getElementById("introducao").style.display = "none";
+
+    // Mostra o conteúdo principal
+    document.getElementById("conteudoPrincipal").style.display = "flex";
+
+    // Esconde todos os conteúdos
+    document.querySelectorAll(".conteudo-item").forEach(function(conteudo) {
+        conteudo.classList.remove("ativo");
+    });
+
+    // Mostra o conteúdo escolhido
+    document.getElementById(tipo).classList.add("ativo");
+}
+function voltarIntroducao() {
+
+    // Mostra a introdução
+    document.getElementById("introducao").style.display = "block";
+
+    // Esconde o painel
+    document.getElementById("conteudoPrincipal").style.display = "none";
+
+}
+
+    </script>
+
+
+
+    <footer>
+        Copyright &copy; GR SADP 2026/1
+    </footer>
 </body>
-
 </html>
+
